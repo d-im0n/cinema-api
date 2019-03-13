@@ -1,0 +1,2 @@
+INSERT INTO MOVIES VALUES (1, 'Terminator', '1:30', 'A', current_timestamp, current_timestamp);
+INSERT INTO MOVIE_SESSIONS VALUES (1, current_timestamp + interval '1 hour', 1, 1, 1, 'A', current_timestamp, current_timestamp);

@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: changelog-1.0
+      author: dm_aq
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: SERIAL
+              - column:
+                  name: movie_session_id
+                  type: INTEGER
+              - column:
+                  name: seat_id
+                  type: INTEGER
+              - column:
+                  name: status
+                  type: CHAR(1)
+              - column:
+                  name: insstmp
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: updstmp
+                  type: TIMESTAMP WITHOUT TIME ZONE
+            tableName: tickets

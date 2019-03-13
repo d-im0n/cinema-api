@@ -1,0 +1,66 @@
+databaseChangeLog:
+    - changeSet:
+          id: 1551696428865-1
+          author: dm_aq (generated)
+          changes:
+              - createTable:
+                    columns:
+                        - column:
+                              autoIncrement: true
+                              constraints:
+                                  nullable: false
+                              name: id
+                              type: SERIAL
+                        - column:
+                              name: datetime
+                              type: TIMESTAMP WITHOUT TIME ZONE
+                        - column:
+                              name: movie_id
+                              type: INTEGER
+                        - column:
+                              name: hall_id
+                              type: INTEGER
+                        - column:
+                              name: tariff_id
+                              type: INTEGER
+                        - column:
+                              name: status
+                              type: CHAR(1)
+                        - column:
+                              name: insstmp
+                              type: TIMESTAMP WITHOUT TIME ZONE
+                        - column:
+                              name: updstmp
+                              type: TIMESTAMP WITHOUT TIME ZONE
+                    tableName: movie_sessions
+    - changeSet:
+          id: 1551696428865-2
+          author: dm_aq (generated)
+          changes:
+              - createTable:
+                    columns:
+                        - column:
+                              autoIncrement: true
+                              constraints:
+                                  nullable: false
+                              name: id
+                              type: SERIAL
+                        - column:
+                              name: name
+                              type: VARCHAR(100)
+                        - column:
+                              name: duration
+                              type: VARCHAR(10)
+                        - column:
+                              name: status
+                              type: CHAR(1)
+                        - column:
+                              name: insstmp
+                              type: TIMESTAMP WITHOUT TIME ZONE
+                        - column:
+                              name: updstmp
+                              type: TIMESTAMP WITHOUT TIME ZONE
+                    tableName: movies
+
+    - include:
+          file: /db/changelog/db.changelog-1.0.yaml
